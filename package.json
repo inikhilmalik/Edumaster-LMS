@@ -7,8 +7,9 @@
     "dev:server": "tsx watch server/index.ts",
     "dev:all": "concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "next build",
+    "build:server": "tsc server/index.ts --outDir dist --esModuleInterop --resolveJsonModule --skipLibCheck --moduleResolution node",
     "start": "next start",
-    "start:server": "node server/index.js",
+    "start:server": "node dist/server/index.js",
     "lint": "eslint"
   },
   "dependencies": {
