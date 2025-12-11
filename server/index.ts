@@ -9,7 +9,7 @@ import progressRoutes from './routes/progress';
 dotenv.config({ path: '.env' });
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = parseInt(process.env.PORT || '4000', 10);
 
 // Middleware
 app.use(cors());
