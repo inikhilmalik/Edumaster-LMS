@@ -3,13 +3,11 @@ services:
     name: edumaster-lms-backend
     runtime: node
     plan: free
-    buildCommand: npm install && npx tsc server/index.ts --outDir dist --esModuleInterop --resolveJsonModule --skipLibCheck
-    startCommand: node dist/server/index.js
+    buildCommand: npm install && npm run build:server
+    startCommand: npm run start:server
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
       - key: MONGODB_URI
         sync: false
       - key: JWT_SECRET
