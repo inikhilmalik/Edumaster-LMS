@@ -47,6 +47,9 @@ export const register = async (req: Request, res: Response): Promise<void> => {
         name: user.name,
         email: user.email,
         role: user.role,
+        avatar: user.avatar,
+        bio: user.bio,
+        enrolledCourses: user.enrolledCourses,
       },
     });
   } catch (error: any) {
@@ -95,6 +98,8 @@ export const login = async (req: Request, res: Response): Promise<void> => {
         email: user.email,
         role: user.role,
         avatar: user.avatar,
+        bio: user.bio,
+        enrolledCourses: user.enrolledCourses,
       },
     });
   } catch (error: any) {
